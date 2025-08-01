@@ -2,16 +2,7 @@
   <div class="flex flex-col items-center p-6">
     <hr class="w-full border-t border-gray-300 mb-4" />
     <div class="flex items-center justify-center w-full px-4">
-      <p
-        v-if="activeEventsCount.length >= 100"
-        class="text-2xl font-bold text-center lg:text-3xl"
-      >
-        <span class="bg-primary-gradient bg-clip-text text-transparent">{{
-          activeEventsCount.length
-        }}</span>
-        <span class="">{{ $t('counter') }}</span>
-      </p>
-      <p v-else class="text-2xl font-bold text-center lg:text-3xl">
+      <p class="text-2xl font-bold text-center lg:text-3xl">
         <span class="">{{ $t('allEvents') }}</span>
       </p>
     </div>

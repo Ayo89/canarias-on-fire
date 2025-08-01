@@ -14,6 +14,7 @@ const scrapeGobCanarias = require('./api/scraping/gobiernoCanarias')
 const scrapeTeaTenerife = require('./api/scraping/teaTenerife')
 const scrapeLaAgenda = require('./api/scraping/laAgenda.js')
 const { closePassedEvents } = require('./api/controllers/event.controller.js')
+const scrapearDesdeMesActualHastaDiciembre = require('./api/scraping/calendarioeventcanaria.js')
 const Scraper = require('./api/scraping/scraperWithPuppeteer.js')
 const scraper = new Scraper()
 const {
@@ -126,8 +127,9 @@ async function main() {
     //await updateSlugs()
     //await fixBrokenDates()
     //await normalizeAllEventNames()
-    await Company.init()
+    //await Company.init()
     //await closePassedEvents()
+    await scrapearDesdeMesActualHastaDiciembre()
     console.log('Scraping completed successfully.')
   } catch (error) {
     console.error('Error during scraping:', error)

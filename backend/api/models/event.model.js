@@ -141,6 +141,10 @@ const EventSchema = new mongoose.Schema(
     },
     reviewed: { type: Boolean, default: false },
     slug: { type: String },
+    isProxied: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 )

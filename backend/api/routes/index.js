@@ -12,6 +12,7 @@ const NewsletterRouter = require('./newsletter.router')
 const Auth0CreateUser = require('../services/auth0-create-user')
 const brevoWebhookRouter = require('./brevoWebhook.router')
 const stripePromoRouter = require('./stripePromo.router')
+const imgProxyRouter = require('./imgProxy.router')
 
 router
   .use('/auth', AuthRouter)
@@ -26,5 +27,6 @@ router
   .use('/services/auth0-create-user', Auth0CreateUser)
   .use('/brevo-webhooks', brevoWebhookRouter)
   .use('/stripe-promo', stripePromoRouter)
+  .use('/img-proxy', imgProxyRouter)
 
 module.exports = router
